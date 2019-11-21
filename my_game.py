@@ -34,6 +34,11 @@ class Fight:
             raise TypeError("Not valid type of data in")
 
     def to_fight(self):
+        self.unit1._attack += randint(-5, 5)
+        self.unit2._attack += randint(-5, 5)
+        self.unit1._defence += randint(-5, 5)
+        self.unit2._defence += randint(-5, 5)
+        print(unit_1, unit_2)
         if all([self.unit1._health > 0, self.unit2._health > 0]):       # нет смысла начинать бой, если кто-то "устал"
             who_starts = randint(1, 10)                                 # кто начинает бой
             if who_starts % 2 != 0:
